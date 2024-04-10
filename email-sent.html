@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,22 +36,23 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            justify-items: center;
         }
 
-        .logo {
+        .form-container__logo {
             width: 150px;
             margin-bottom: 30px;
             justify-self: center;
             display: none;
         }
 
-        .title {
+        .form-container__title {
             font-size: var(--lg);
             margin-bottom: 12px;
             text-align: center;
         }
 
-        .subtitle {
+        .form-container__subtitle {
             color: var(--very-light-pink);
             font-size: var(--md);
             margin-top: 0;
@@ -58,28 +60,33 @@
             text-align: center;
         }
 
-        .login-form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-
-        .input {
+        .email-image {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 32px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
+        .email-image img {
+            width: 80px;
+        }
+
+        .resend {
+            font-size: var(--sm);
+        }
+
+        .resend span {
+            color: var(--very-light-pink);
+        }
+
+        .resend a {
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
         .primary--button {
             background-color: var(--hospital-green);
             border: none;
@@ -94,33 +101,34 @@
             padding: 6px 12px;
         }
 
-        .login-form__primary-button {
-            margin-top: 14px;
-            margin-bottom: 30px;
-        }
-
         @media (max-width: 690px) {
-            .logo {
+            .form-container__logo {
                 display: block;
             }
         }
-
     </style>
 </head>
+
 <body>
     <div class="main-container">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
-            <form action="/" class="login-form">
-                <label for="password" class="label">Password</label>
-                <input type="password" name="password" id="password" placeholder="**********" class="input  login-form--input-password">
-                <label for="confirm-password" class="label">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="**********" class="input  login-form--input-password">
-                <input type="submit" value="Create password" class="login-form__primary-button primary--button">
-            </form>
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="form-container__logo">
+            <h1 class="form-container__title">Email has been sent</h1>
+            <p class="form-container__subtitle">Please check your inbox for instructions on how to reset the password
+            </p>
+
+            <div class="email-image">
+                <img src="./icons/email.svg" alt="email-image">
+            </div>
+
+            <button class="primary--button login-button">Login</button>
+
+            <p class="resend">
+                <span>Didn't receive the email</span>
+                <a href="/">Resend</a>
+            </p>
         </div>
     </div>
 </body>
+
 </html>
