@@ -39,20 +39,20 @@
             justify-items: center;
         }
 
-        .form-container__logo {
+        .logo {
             width: 150px;
             margin-bottom: 30px;
             justify-self: center;
             display: none;
         }
 
-        .form-container__title {
+        .title {
             font-size: var(--lg);
             margin-bottom: 12px;
             text-align: center;
         }
 
-        .form-container__subtitle {
+        .subtitle {
             color: var(--very-light-pink);
             font-size: var(--md);
             margin-top: 0;
@@ -87,6 +87,7 @@
             color: var(--hospital-green);
             text-decoration: none;
         }
+        
         .primary--button {
             background-color: var(--hospital-green);
             border: none;
@@ -102,7 +103,7 @@
         }
 
         @media (max-width: 690px) {
-            .form-container__logo {
+            .logo {
                 display: block;
             }
         }
@@ -112,9 +113,9 @@
 <body>
     <div class="main-container">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="form-container__logo">
-            <h1 class="form-container__title">Email has been sent</h1>
-            <p class="form-container__subtitle">Please check your inbox for instructions on how to reset the password
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">Email has been sent</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password
             </p>
 
             <div class="email-image">
